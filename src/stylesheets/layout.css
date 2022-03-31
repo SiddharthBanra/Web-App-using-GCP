@@ -1,0 +1,23 @@
+.header {position: fixed;
+top:0%;
+left: 0%;
+right: 0%;
+
+}
+
+
+.navbar{background-color:#25251f !important;}
+.nav-link{
+color:beige !important;
+}
+.navbar-brand{
+    color:beige !important;
+}
+
+.footer{
+    background-color: antiquewhite;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+}
