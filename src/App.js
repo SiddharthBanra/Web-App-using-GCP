@@ -9,6 +9,7 @@ import Loginpage from './pages/Loginpage';
 import Registerpage from './pages/Registerpage';
 import Cartpage from './pages/Cartpage';
 import './stylesheets/layout.css';
+import './stylesheets/products.css';
 function App() {
   return (
     <div className="App">

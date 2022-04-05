@@ -14,10 +14,22 @@ color:beige !important;
     color:beige !important;
 }
 
+.content{padding-top:80px;}
+
 .footer{
     background-color: antiquewhite;
     position: absolute;
     bottom: 0%;
     left: 0%;
     right: 0%;
+}
+
+.loader
+{
+
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
 }
