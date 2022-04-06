@@ -1,9 +1,9 @@
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import Loader from "../components/Loader";
 import { toast } from "react-toastify";
+
 function RegisterPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -36,18 +36,17 @@ function RegisterPage() {
     <div className="register-parent">
       {loading && <Loader />}
       <div className="register-top"></div>
-      <div className="row justify-content-center">
-        <div className="col-md-5">
+    <div className="row justify-content-centre">
+        <div className="col-md-6">
           <lottie-player
-            src="https://assets7.lottiefiles.com/packages/lf20_yr6zz3wv.json"
-            background="transparent"
-            speed="1"
+            src="https://assets9.lottiefiles.com/private_files/lf30_1h70d9xc.json" background="transparent" speed="1"
             loop
             autoplay
           ></lottie-player>
         </div>
-
+        
         <div className="col-md-4 z1">
+        
           <div className="register-form">
             <h2>Register</h2>
 
