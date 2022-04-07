@@ -7,6 +7,12 @@ function Header() {
 
   const {cartItems}=useSelector(state=>state.cartReducer)
   const { user } = JSON.parse(localStorage.getItem("currentUser"));
+
+
+  const logout = () => {
+    localStorage.removeItem("currentUser");
+    window.location.reload();
+  };
   return (
     <div className="header">
       
@@ -22,14 +28,10 @@ function Header() {
               <Link className="nav-link active" aria-current="page" to="#"><FaUser/>{user.email.substring(0, user.email.length - 10)}</Link>
             </li>
 
+           
             <li className="nav-item">
-            <Link className="nav-link " to='#'>ORDERS</Link>
-
-
-            </li>
-
-            <li className="nav-item">
-            <Link className="nav-link " to='#'>LOGOUT</Link>
+            <Link className="nav-link" to="/" onClick={logout}>LOGOUT
+                </Link>
 
 
             </li>

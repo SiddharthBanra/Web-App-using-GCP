@@ -19,6 +19,12 @@ function Loginpage() {
         email,
         password
       );
+
+      <div style={{ 
+        backgroundImage: `url("https://img.traveltriangle.com/blog/wp-content/uploads/2019/08/Indian-Restaurants-In-Japan.jpg")` 
+      }}>
+        
+      </div>
       localStorage.setItem('currentUser' , JSON.stringify(result))
       setLoading(false);
       toast.success("Login successfull");
@@ -39,7 +45,7 @@ function Loginpage() {
       <div className="row justify-content-centre">
         <div className="col-md-6">
           <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_gjmecwii.json" 
-          background="transparent" speed="1"  loop controls autoplay></lottie-player>
+          background="transparent" speed="1" loop  ></lottie-player>
         </div>
 
         <div className="col-md-4 z1">

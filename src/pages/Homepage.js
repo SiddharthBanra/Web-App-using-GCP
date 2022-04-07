@@ -73,12 +73,12 @@ function Homepage() {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartItems]);
 const addToCart=(product)=>{dispatch ({type:'ADD_TO_CART',payload:product})}
-
+///<button onClick={addProductsData}>add data to FireDB</button>
   return (
    
     <Layout loading={loading}>
 
-<button onClick={addProductsData}>add data to FireDB</button>
+
 
       <div className="container">
 

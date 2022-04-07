@@ -3,8 +3,8 @@ import './App.css';
 import Homepage from './pages/Homepage';
 
 
-import { Route, BrowserRouter, Routes } from 'react-router-dom'
-import Productinfo from './pages/Productinfo';
+import { Route, BrowserRouter, Routes, Navigate } from 'react-router-dom'
+
 import Loginpage from './pages/Loginpage';
 import Registerpage from './pages/Registerpage';
 import Cartpage from './pages/Cartpage';
@@ -16,14 +16,27 @@ import 'react-toastify/dist/ReactToastify.css'
 function App() {
   return (
     <div className="App">
-      <ToastContainer/>
+      <ToastContainer />
       <BrowserRouter>
+
         <Routes>
-          <Route path='/' exact element={<Homepage />} />
-          <Route path='/login' exact element={<Loginpage />} />
+          <Route path='/' element={
+            <ProtectedRoutes>
+              <Homepage />
+            </ProtectedRoutes>
+          } />
+
+          
+
+          <Route path='/cart' exact element={
+            <ProtectedRoutes>
+              <Cartpage />
+            </ProtectedRoutes>} />
+
+
+            <Route path='/login' exact element={<Loginpage />} />
+          
           <Route path='/register' exact element={<Registerpage />} />
-          <Route path='/product' exact element={<Productinfo />} />
-          <Route path='/cart' exact element={<Cartpage />} />
 
         </Routes>
 
@@ -35,3 +48,11 @@ function App() {
 }
 
 export default App;
+
+export const ProtectedRoutes = ({ children }) => {
+  if (localStorage.getItem("currentUser")) {
+    return children;
+  } else {
+    return <Navigate to="/login" />;
+  }
+};
