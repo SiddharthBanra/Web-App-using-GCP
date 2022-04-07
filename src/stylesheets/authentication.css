@@ -39,6 +39,7 @@ input , textarea{
 .login-parent{
     height: 100vh;
     background-color: aliceblue;
+    
 }
 .login-parent .row{
     height: 100vh;
